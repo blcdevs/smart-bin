@@ -1,4 +1,4 @@
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./Screens/Dashboard/Dashboard";
 import { BrowserRouter } from "react-router-dom";
 
 

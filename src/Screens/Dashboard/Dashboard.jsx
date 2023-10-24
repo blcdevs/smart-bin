@@ -1,7 +1,8 @@
 import React from 'react'
-import { binCards, tableData, bars } from './DashboardData'
+import { binCards, tableData, bars } from '../../components/Dashboard/DashboardData'
 import { NavLink } from 'react-router-dom'
-import './Dashboard.css'
+import '../../components/Dashboard/Dashboard.css'
+import BarChartNoPadding from '../../components/Charts/BarChartNoPadding'
 
 function Dashboard() {
   return (
@@ -75,6 +76,7 @@ function Dashboard() {
                 <p className='below-text'>New User</p>
             </div>
             </div>
+
             <div className="bar-con">
                 <div className="bar-top">
                     <div className="top-left">
@@ -100,7 +102,11 @@ function Dashboard() {
                         )
                     })}
                 </div>
+
+                <BarChartNoPadding/>
+
             </div>
+            
             <div className="table">
                 <div className="table-top">
                     <h3>Waste Bin Status</h3>
