@@ -42,6 +42,8 @@ function Dashboard() {
                 </div>
             </div>
         </nav>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div className="dashboard-cont">
         <div className="dashboard-header">
             <form>
