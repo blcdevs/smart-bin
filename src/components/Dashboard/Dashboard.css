@@ -86,7 +86,7 @@ nav h1{
     display: flex;
     flex-direction: column;
     margin-right: 50px;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 20px;
     width: 85%;
 }
@@ -392,4 +392,14 @@ hr{
     line-height: 14.6px;
     color: #151515;
     margin-left: 10px;
+}
+@media (max-width: 1300px) {
+    .dashboard-cont{
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+        margin-left: 300px;
+        margin-top: 20px;
+        width: 85%;
+    }
 }

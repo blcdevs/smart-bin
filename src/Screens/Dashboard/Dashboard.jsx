@@ -11,7 +11,7 @@ function Dashboard() {
             <h1>Waste Management System</h1>
             <div className="nav-con">
                 <div className="nav-link">
-                    <NavLink to='/' className="nav-link">
+                    <NavLink to='/dashboard' className="nav-link">
                         <img src="./images/dashb.svg" alt="" className='dashboard-img' />
                         Dashboard
                     </NavLink>
