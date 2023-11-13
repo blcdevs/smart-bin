@@ -119,7 +119,7 @@
     .auth-wrapper h1{
         color: #009A40;
         text-align: center;
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
@@ -142,7 +142,7 @@
     .auth-wrapper form label, .auth-wrapper form p{
         margin-top: 10px;
         color: #151515;
-        font-family: Inter;
+        font-family: 'Inter';
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
