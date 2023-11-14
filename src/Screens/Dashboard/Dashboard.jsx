@@ -1,63 +1,36 @@
-import React from 'react'
-import { binCards, tableData, bars } from '../../components/Dashboard/DashboardData'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { binCards, bars, data } from '../../components/Dashboard/DashboardData'
+import { filterKeys } from '../../components/WasteBinComp/WasteBinCompData'
 import '../../components/Dashboard/Dashboard.css'
 import BarChartNoPadding from '../../components/Charts/BarChartNoPadding'
+import NavBar from '../../components/NavBar/NavBar'
+import Header from '../../components/Header/Header'
+import '../../../src/components/WasteBinComp/WasteBinComp.css'
 
-function Dashboard() {
+function Dashboard({
+    filteredItems,
+    searchKey,
+    setSearchKey,
+    activeFilterKey,
+    setActiveFilterKey
+}) {
+    const [seeMore, setSeeMore] = useState(false)
+    const getFilterKey = (value) => {
+        if(value.toLowerCase() === 'all'){
+            return setSearchKey('')
+        }
+        else{
+            return setSearchKey(value.toLowerCase())
+        }
+    }
   return (
     <div className='dashboard-wrapper'>
-        <nav>
-            <h1>Waste Management System</h1>
-            <div className="nav-con">
-                <div className="nav-link">
-                    <NavLink to='/' className="nav-link">
-                        <img src="./images/dashb.svg" alt="" className='dashboard-img' />
-                        Dashboard
-                    </NavLink>
-                </div>
-                <div className="nav-link" id='link'>
-                    <img src="./images/bin-status.svg" alt="" />
-                    <p>Bin Status</p>
-                </div>
-                <div className="nav-link" id='link'>
-                    <img src="./images/users.svg" alt="" />
-                    <p>Users</p>
-                </div>
-                <div className="nav-link" id='link'>
-                    <img src="./images/notification.svg" alt="" />
-                    <p>Notifications</p>
-                </div>
-                <div className="nav-link" id='link'>
-                    <img src="./images/payments.svg" alt="" />
-                    <p>Payments</p>
-                </div>
-                <div className="nav-link" id='link'>
-                    <img src="./images/settings.svg" alt="" />
-                    <p>Settings</p>
-                </div>
-                <div className="nav-link" id='nav-link'>
-                    <img src="./images/Group.svg" alt="" />
-                    <p>Log Out</p>
-                </div>
-            </div>
-        </nav>
-
+        <div className="nav-wrapper">
+            <NavBar />
+        </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div className="dashboard-cont">
-        <div className="dashboard-header">
-            <form>
-                <input 
-                    type="text"
-                    placeholder='Search' 
-                    className='dashboard-input'
-                />
-            </form>
-            <div className="header-right">
-                <img src="./images/bell.svg" alt="bell" className='bell' />
-                <img src="./images/dp.svg" alt="dp" className='dp' />
-        </div>
-            </div>
+        <Header />
             
             <div className="binCards">
             {binCards.map((bin => {
@@ -112,11 +85,33 @@ function Dashboard() {
             <div className="table">
                 <div className="table-top">
                     <h3>Waste Bin Status</h3>
-                    <p className='green-line'></p>
-                    <p>Standing</p>
-                    <button>Area 1
-                        <img src="./images/dropDown.svg" alt="dropDown" className='dropDown' />
-                    </button>
+                    <div className="filter-container">
+                    <div className="filter-div">
+                        {filterKeys.slice(0, 5).map((data, index)=>(
+                            <p 
+                                className="filterKey"
+                                key={index}
+                                id={index === activeFilterKey && "activeFilterKey"}
+                                onClick={()=>{
+                                    getFilterKey(data.filterKey)
+                                    setActiveFilterKey(index)
+                                }}
+                            >{data.filterKey}</p>
+                        ))}
+                    </div>
+                    <select name="" id="select-div">
+                        <option value="location" id='first-opt'>Select Location</option>
+                        {filterKeys.slice(5, filterKeys.length).map((data, index)=>(
+                            <option 
+                                value={data.filterKey} 
+                                key={index}
+                                onClick={()=>{
+                                    setSearchKey(data.filterKey.toLowerCase())
+                                }}
+                            >{data.filterKey}</option>
+                        ))}
+                    </select>
+                    </div>
                 </div>
                 <div className="table-head">
                     <p className='id'>Bin ID</p>
@@ -127,14 +122,16 @@ function Dashboard() {
                     <p className='date'>Last Emptied Date</p>
                 </div>
                 <hr />
-                {tableData.map((data)=>{
+                {seeMore ?
+                    <>
+                        {filteredItems.slice(0, 20).map((data)=>{
                     return (
                         <>
                         <div className="table-head" key={data.id}>
                             <div className="table-row table-head">
                                 <p>{data.id}</p>
-                                <p className={data.id === 2 ? 'red' : 'blue'} id={data.id === 10 && 'blue'}>{data.level}</p>
-                                <p className={data.stability === 'Fallen' ?'red' : 'blue'}>{data.stability}</p>
+                                <p className={data.level.toLowerCase() === 'full' ? 'red' : 'blue'}>{data.level}</p>
+                                <p className={data.stability.toLowerCase() === 'fallen' ?'red' : 'blue'}>{data.stability}</p>
                                 <p>{data.user}</p>
                                 <p>{data.location}</p>
                                 <p className='blue'>{data.date}</p>
@@ -145,9 +142,34 @@ function Dashboard() {
 
                     )
                 })}
-                <div className="download">
+
+                    </>
+                    :
+                    <>
+                        {filteredItems.slice(0, 10).map((data)=>{
+                    return (
+                        <>
+                        <div className="table-head" key={data.id}>
+                            <div className="table-row table-head">
+                                <p>{data.id}</p>
+                                <p className={data.level.toLowerCase() === 'full' ? 'red' : 'blue'}>{data.level}</p>
+                                <p className={data.stability.toLowerCase() === 'fallen' ?'red' : 'blue'}>{data.stability}</p>
+                                <p>{data.user}</p>
+                                <p>{data.location}</p>
+                                <p className='blue'>{data.date}</p>
+                            </div>
+                        </div>
+                            <hr />
+                        </>
+
+                    )
+                })}
+
+                    </>
+                }
+                    <div className="download">
                     <button>Download Report</button>
-                    <p>See more</p>
+                    <p onClick={()=>setSeeMore(!seeMore)} style={{cursor: 'pointer'}}>{seeMore ? 'See less' : 'See more'}</p>
                 </div>
             </div>
         </div>

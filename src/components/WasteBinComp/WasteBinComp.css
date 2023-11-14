@@ -1,0 +1,37 @@
+.filter-container{
+    display: flex;
+    align-items: center;
+}
+.filter-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filter-div p{
+    margin-right: 20px;
+    cursor: pointer;
+}
+#activeFilterKey{
+    border-bottom: 2px solid #009A40;
+    padding: 3px;
+    padding-bottom: 1px;
+}
+#select-div{
+    border: 2px solid #818181;
+    border-radius: 8px;
+    padding: 5px;
+    color:#818181;
+    cursor: pointer;
+}
+#select-div option{
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#first-opt{
+    color:#818181;
+    display: none;
+}
