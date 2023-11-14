@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import NavBar from '../../components/NavBar/NavBar'
-import { tableData, filterKeys } from '../../components/WasteBinComp/WasteBinCompData'
+import { filterKeys } from '../../components/WasteBinComp/WasteBinCompData'
 import '../../../src/components/BinStatus/BinStatus.css'
 
 function BinStatus({
     filteredItems,
-    searchKey,
     setSearchKey,
     activeFilterKey,
     setActiveFilterKey
