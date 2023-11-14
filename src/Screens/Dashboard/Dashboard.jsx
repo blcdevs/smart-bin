@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { binCards, bars, data } from '../../components/Dashboard/DashboardData'
+import { binCards, bars } from '../../components/Dashboard/DashboardData'
 import { filterKeys } from '../../components/WasteBinComp/WasteBinCompData'
 import '../../components/Dashboard/Dashboard.css'
 import BarChartNoPadding from '../../components/Charts/BarChartNoPadding'
@@ -9,7 +9,6 @@ import '../../../src/components/WasteBinComp/WasteBinComp.css'
 
 function Dashboard({
     filteredItems,
-    searchKey,
     setSearchKey,
     activeFilterKey,
     setActiveFilterKey
@@ -99,15 +98,18 @@ function Dashboard({
                             >{data.filterKey}</p>
                         ))}
                     </div>
-                    <select name="" id="select-div">
+                    <select 
+                        name="" 
+                        id="select-div"
+                        onChange={(e) => {
+                            setSearchKey(e.target.value.toLowerCase());
+                          }}
+                    >
                         <option value="location" id='first-opt'>Select Location</option>
                         {filterKeys.slice(5, filterKeys.length).map((data, index)=>(
                             <option 
                                 value={data.filterKey} 
                                 key={index}
-                                onClick={()=>{
-                                    setSearchKey(data.filterKey.toLowerCase())
-                                }}
                             >{data.filterKey}</option>
                         ))}
                     </select>
