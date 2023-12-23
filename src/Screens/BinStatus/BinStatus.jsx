@@ -8,7 +8,9 @@ function BinStatus({
     filteredItems,
     setSearchKey,
     activeFilterKey,
-    setActiveFilterKey
+    setActiveFilterKey,
+    mobileView,
+    setMobileView
 }) {
     const [seeMore, setSeeMore] = useState(false)
     const [selectedBin, setSelectedBin] = useState(0)
@@ -23,12 +25,28 @@ function BinStatus({
     }
     return (
       <div className='dashboard-wrapper'>
+            <div className="nav-wrapper" id='desktop' >
+            <NavBar 
+                mobileView={mobileView}
+                setMobileView={setMobileView}
+            />
+        </div>
+        {mobileView && (
+            <div id="mobile">
             <div className="nav-wrapper">
-              <NavBar />
-          </div>
+                <NavBar 
+                    mobileView={mobileView}
+                    setMobileView={setMobileView}
+                />
+            </div>
+            </div>
+        )}
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div className="dashboard-cont">
-          <Header />
+          <Header 
+            mobileView={mobileView}
+            setMobileView={setMobileView}
+          />
           <div className="bin-header">
             {!showAllBins && 
                 <img 

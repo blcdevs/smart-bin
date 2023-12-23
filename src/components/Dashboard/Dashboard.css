@@ -1,5 +1,5 @@
 .dashboard-wrapper{
-    background-color: #F7F7FA;
+    background-color: #f7fafa;
     padding-bottom: 50px;
     overflow-x: hidden;
     /* height: 100vh; */
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 50px;
-    margin-left: 200px;
+    margin-left: 15%;
     margin-top: 20px;
     width: 85%;
 }
@@ -215,7 +215,8 @@ hr{
     margin-left: 30px;
     margin-right: 50px;
     margin-top: 40px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    
+    background-color: #FFFFFF;
     padding: 30px;
     border-radius: 20px;
 }
@@ -287,13 +288,1689 @@ hr{
     color: #151515;
     margin-left: 10px;
 }
-@media (max-width: 1300px) {
-    .dashboard-cont{
+.barchart-div{
+    width: 100%;
+    height: 300px;
+}
+.barchart{
+    width: 100%;
+    height: 100%;
+}
+.custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tooltip-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -60px;
+    z-index: 3;
+    margin-left: -10px;
+  }
+  .tooltip-label {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 8px;
+    color: #FFFFFF;
+    line-height: 16px;
+  }
+  
+  .tooltip-amount {
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 16px;
+    margin-top: 0px;
+    font-family: 'Inter';
+  }
+  
+  .tooltip-month {
+    font-size: 12px;
+  }
+  .recharts-cartesian-axis-line {
+    display: none;
+  }
+#mobile{
+    display: none;
+}
+@media (max-width: 1200px) {
+    .binCards{
+        margin-top: 30px;
+        margin-right: 120px;
+        margin-left: 20px;
+    }
+    .binCard-con{
+        display: flex;
+        align-items: center;
+        width: 260px;
+        height: 100px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    border-radius: 20px;
+        padding-left: 20px;
+        height: 125px;
+        margin-right: 20px;
+        background-color: #FFFFFF;
+    }
+    .binImg{
+        width: 50px;
+        height: 50px;
+    }
+    .binCard-text{
         display: flex;
         flex-direction: column;
-        margin-right: 50px;
-        margin-left: 300px;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+    .binCard-text p{
+        font-size: 12px;
+        line-height: 37.5px;
+        color: #151515;
+    }
+    .binCard-text h2{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 37.5px;
+        color: #151515;
+        margin-top: -20px;
+    }
+    .green-tag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #009A40;
+        border-radius: 18px;
+        width: 100px;
+        height: 115px;
+    }
+    .green-tag img{
         margin-top: 20px;
-        width: 85%;
+        width: 30px;
+        height: 30px;
+    }
+    .green-tag p{
+        font-size: 13px;
+        line-height: 37.5px;
+        color: #FFFFFF;
+    }
+    .up-text{
+        margin-top: 0px;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        line-height: 18.75px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000000;
+    }
+    .green-line{
+        width: 59px;
+        border-bottom:  2px solid #009A40;
+        margin-bottom: -15px;
+    }
+    .table{
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    border-radius: 20px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        line-height: 18.75px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000000;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .table-head p{
+        line-height: 23.44px;
+        font-weight: 500;
+        font-size: 14px;
+        width: 16.7%;
+        text-align: center;
+    }
+    .table-head .id{
+        text-align: justify;
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        line-height: 23.44px;
+        font-weight: 500;
+        font-size: 12px;
+        width: 12%;
+        text-align: center;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 30px;
+        border-radius: 8px;
+    }
+    .red{
+        border-radius: 8px;
+        height: 30px;
+    }
+    .download{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 13px;
+        border-radius: 10px;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .download p{ 
+        font-size: 13px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    background-color: #FFFFFF;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar-div{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 62px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 16px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .bar-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 14px;
+    }
+    .top-left h2{
+        font-size: 22px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 10px;
+    }
+    .top-right p{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    .binCards{
+        margin-top: 20px;
+        margin-right: 120px;
+        margin-left: 20px;
+    }
+    .binCard-con{
+        display: flex;
+        align-items: center;
+        width: 230px;
+        border-radius: 20px;
+        padding-left: 20px;
+        height: 90px;
+        margin-right: 20px;
+        background-color: #FFFFFF;
+    }
+    .binImg{
+        width: 40px;
+        height: 40px;
+    }
+    .binCard-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+    .binCard-text p{
+        font-size: 10px;
+        line-height: 37.5px;
+        color: #151515;
+    }
+    .binCard-text h2{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 37.5px;
+        color: #151515;
+        margin-top: -20px;
+    }
+    .green-tag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #009A40;
+        border-radius: 15px;
+        width: 100px;
+        height: 90px;
+    }
+    .green-tag img{
+        margin-top: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    .green-tag p{
+        font-size: 10px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        line-height: 18.75px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000000;
+    }
+    .green-line{
+        width: 59px;
+        border-bottom:  2px solid #009A40;
+        margin-bottom: -15px;
+    }
+    .table{
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);    border-radius: 20px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        line-height: 18.75px;
+        font-size: 9px;
+        font-weight: 500;
+        color: #000000;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .table-head p{
+        line-height: 23.44px;
+        font-weight: 500;
+        font-size: 11px;
+        width: 16.7%;
+        text-align: center;
+    }
+    .table-head .id{
+        text-align: justify;
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        line-height: 23.44px;
+        font-weight: 500;
+        font-size: 10px;
+        width: 12%;
+        text-align: center;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 30px;
+        border-radius: 8px;
+    }
+    .red{
+        border-radius: 8px;
+        height: 30px;
+    }
+    .download{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 10px;
+        border-radius: 10px;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .download p{ 
+        font-size: 10px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar-div{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 12px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 10px;
+    }
+    .top-left h2{
+        font-size: 16px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 10px;
+    }
+    .top-right p{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .binCards{
+        margin-top: 20px;
+        margin-right: 120px;
+        margin-left: 30px;
+    }
+    .binCard-con{
+        width: 200px;
+        border-radius: 14px;
+        padding-left: 10px;
+        height: 70px;
+        margin-right: 20px;
+    }
+    .binImg{
+        width: 30px;
+        height: 30px;
+    }
+    .binCard-text{
+        margin-left: 10px;
+    }
+    .binCard-text p{
+        font-size: 8px;
+    }
+    .binCard-text h2{
+        font-size: 12px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 12px;
+        width: 80px;
+        height: 70px;
+    }
+    .green-tag img{
+        margin-top: 10px;
+        width: 15px;
+        height: 15px;
+        margin-bottom: -3px;
+    }
+    .green-tag p{
+        font-size: 8px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        font-size: 8px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -25px;
+        display: none;
+    }
+    .table{
+        border-radius: 20px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        font-size: 7px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -5px;
+        font-size: 9px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 8px;
+        width: 16%;
+        text-align: center;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1px 2px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 30px;
+        border-radius: 8px;
+    }
+    .red{
+        border-radius: 8px;
+        height: 30px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 8px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 8px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar-div{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 12px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 10px;
+    }
+    .top-left h2{
+        font-size: 16px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 10px;
+    }
+    .top-right p{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 700px) {
+    .binCards{
+        margin-top: 20px;
+        margin-right: 120px;
+        margin-left: 30px;
+    }
+    .binCard-con{
+        width: 200px;
+        border-radius: 10px;
+        padding-left: 10px;
+        height: 50px;
+        margin-right: 20px;
+    }
+    .binImg{
+        width: 20px;
+        height: 20px;
+    }
+    .binCard-text{
+        margin-left: 8px;
+    }
+    .binCard-text p{
+        font-size: 5px;
+    }
+    .binCard-text h2{
+        font-size: 8px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 10px;
+        width: 80px;
+        height: 50px;
+    }
+    .green-tag img{
+        margin-top: 10px;
+        width: 8px;
+        height: 8px;
+        margin-bottom: -10px;
+    }
+    .green-tag p{
+        font-size: 6px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        font-size: 6px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -25px;
+        display: none;
+    }
+    .table{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        font-size: 6px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -40px;
+        font-size: 6px;
+        margin-right: 40px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 6px;
+        width: 16%;
+        margin-left: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 3px;
+        padding-left: 4px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 20px;
+        border-radius: 4px;
+    }
+    .red{
+        border-radius: 4px;
+        height: 20px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 6px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 6px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 8px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 7px;
+    }
+    .top-left h2{
+        font-size: 8px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 8px;
+    }
+    .top-right p{
+        font-size: 8px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 600px) {
+#desktop{
+    display: none;
+}
+    .dashboard-cont{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    #mobile{
+        display: block;
+        height: 100vh;
+        background-color: #FFFFFF;
+    }
+    .nav-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .binCards{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        margin-top: 50px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .binCard-con{
+        width: 220px;
+        border-radius: 10px;
+        padding-left: 15px;
+        height: 55px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .binImg{
+        width: 20px;
+        height: 20px;
+    }
+    .binCard-text{
+        margin-left: 8px;
+    }
+    .binCard-text p{
+        font-size: 8px;
+    }
+    .binCard-text h2{
+        font-size: 12px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 10px;
+        width: 90px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .green-tag img{
+        margin-top: 5px;
+        width: 10px;
+        height: 10px;
+        margin-bottom: -10px;
+    }
+    .green-tag p{
+        font-size: 8px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 100%;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        font-size: 7px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -25px;
+        display: none;
+    }
+    .table{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        font-size: 6px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -40px;
+        font-size: 6px;
+        margin-right: 40px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 6px;
+        width: 16%;
+        margin-left: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 3px;
+        padding-left: 4px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 20px;
+        border-radius: 4px;
+    }
+    .red{
+        border-radius: 4px;
+        height: 20px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 6px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 6px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 10px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 8px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 7px;
+    }
+    .top-left h2{
+        font-size: 8px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 5px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 6px;
+    }
+    .top-right p{
+        font-size: 6px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .dashboard-cont{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    /* .nav-wrapper{
+        display: none;
+    } */
+    .binCards{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        margin-top: 40px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .binCard-con{
+        width: 150px;
+        border-radius: 10px;
+        padding-left: 15px;
+        height: 55px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .binImg{
+        width: 20px;
+        height: 20px;
+    }
+    .binCard-text{
+        margin-left: 8px;
+    }
+    .binCard-text p{
+        font-size: 8px;
+    }
+    .binCard-text h2{
+        font-size: 12px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 10px;
+        width: 90px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .green-tag img{
+        margin-top: 5px;
+        width: 10px;
+        height: 10px;
+        margin-bottom: -10px;
+    }
+    .green-tag p{
+        font-size: 8px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 6px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        font-size: 5px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -55px;
+        display: none;
+    }
+    .table{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 30px;
+        width: 96%;
+        margin-left: 15px;
+    }
+    .table-top button{
+        font-size: 6px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -60px;
+        font-size: 6px;
+        margin-right: 50px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 6px;
+        width: 16%;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 3px;
+        padding-left: 4px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 20px;
+        border-radius: 4px;
+    }
+    .red{
+        border-radius: 4px;
+        height: 20px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 6px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 6px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 8px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 7px;
+    }
+    .top-left h2{
+        font-size: 8px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 8px;
+    }
+    .top-right p{
+        font-size: 8px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 420px) {
+    .binCards{
+        margin-right: 0;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .dashboard-cont{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    /* .nav-wrapper{
+        display: none;
+    } */
+    .binCards{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .binCard-con{
+        width: 120px;
+        border-radius: 10px;
+        padding-left: 15px;
+        height: 55px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .binImg{
+        width: 20px;
+        height: 20px;
+    }
+    .binCard-text{
+        margin-left: 8px;
+    }
+    .binCard-text p{
+        font-size: 6px;
+    }
+    .binCard-text h2{
+        font-size: 8px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 10px;
+        width: 90px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .green-tag img{
+        margin-top: 5px;
+        width: 10px;
+        height: 10px;
+        margin-bottom: -10px;
+    }
+    .green-tag p{
+        font-size: 8px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 92%;
+    }
+    .table-top{
+        margin-top: -20px;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 6px;
+        line-height: 10.44px;
+        color: #000000;
+        margin-left: -20px;
+        margin-right: 50px;
+    }
+    .table-top p{
+        font-size: 6px;
+        padding: -5px;
+        padding-left: -10px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -25px;
+        display: none;
+    }
+    .table{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        font-size: 6px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -40px;
+        font-size: 4.5px;
+        margin-right: 40px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 4.5px;
+        width: 16%;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 3px;
+        padding-left: 4px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 20px;
+        border-radius: 4px;
+    }
+    .red{
+        border-radius: 4px;
+        height: 20px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 6px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 6px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 8px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 7px;
+    }
+    .top-left h2{
+        font-size: 8px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 8px;
+    }
+    .top-right p{
+        font-size: 8px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 350px) {
+    .dashboard-cont{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    #mobile{
+        display: block;
+        height: 130vh;
+        background-color: #FFFFFF;
+    }
+    .binCards{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 30px;
+    }
+    .binCard-con{
+        width: 120px;
+        border-radius: 10px;
+        padding-left: 15px;
+        height: 55px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .binImg{
+        width: 16px;
+        height: 16px;
+    }
+    .binCard-text{
+        margin-left: 8px;
+    }
+    .binCard-text p{
+        font-size: 6px;
+    }
+    .binCard-text h2{
+        font-size: 9px;
+        margin-top: -25px;
+    }
+    .green-tag{
+        border-radius: 10px;
+        width: 80px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .green-tag img{
+        margin-top: 8px;
+        width: 8px;
+        height: 8px;
+        margin-bottom: -10px;
+    }
+    .green-tag p{
+        font-size: 7px;
+    }
+    .up-text{
+        margin-top: 0;
+    }
+    .below-text{
+        margin-top: -30px;
+    }
+    .table{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .table-top h3{
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 23.44px;
+        color: #000000;
+    }
+    .table-top p{
+        font-size: 6px;
+    }
+    .green-line{
+        width: 59px;
+        margin-bottom: -25px;
+        display: none;
+    }
+    .table{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    .table-top button{
+        font-size: 6px;
+        cursor: pointer;
+    }
+    .table-top button img{
+        width: 20px;
+        height: 11.54px;
+        margin-left: 10px;
+    }
+    .table-head{ 
+        width: 100%;
+    }
+    .table-head p{
+        width: 16.7%;
+        margin-left: -40px;
+        font-size: 6px;
+        margin-right: 40px;
+    }
+    .table-head .id{
+        margin-left: 40px;
+        width: 12%
+    }
+    .table-row{
+        margin-right: 40px;
+        height: 30px;
+    }
+    .table-row:hover{
+        background-color: #dfece5;
+    }
+    .table-row p{
+        font-size: 6px;
+        width: 16%;
+        margin-left: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 3px;
+        padding-left: 4px;
+    }
+    hr{
+        width: 97%;
+    }
+    .blue{
+        height: 20px;
+        border-radius: 4px;
+    }
+    .red{
+        border-radius: 4px;
+        height: 20px;
+    }
+    .download{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .download button{ 
+        font-size: 6px;
+        border-radius: 6px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download p{ 
+        font-size: 6px;
+    }
+    .bar-con{
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .bar-img{
+        width: 40px;
+    }
+    .bar p{
+        font-weight: 500;
+        font-size: 8px;
+        columns: #151515;
+        line-height: 18.75px;
+    }
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-left p{
+        font-size: 7px;
+    }
+    .top-left h2{
+        font-size: 8px;
+    }
+    .top-right{ 
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #818181;
+    }
+    .date-input{
+        font-size: 8px;
+    }
+    .top-right p{
+        font-size: 8px;
+        margin-left: 10px;
     }
 }

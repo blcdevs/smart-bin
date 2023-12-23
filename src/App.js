@@ -13,6 +13,7 @@ import { tableData } from "./components/WasteBinComp/WasteBinCompData";
 function App() {
   const [searchKey, setSearchKey] = useState('');
   const [activeFilterKey, setActiveFilterKey] = useState(0);
+  const [mobileView, setMobileView] = useState(false);
 
   const filteredItems = tableData.filter((item) => {
   const keysToSearch = ['id', 'level', 'stability', 'user', 'location', 'date'];
@@ -33,14 +34,18 @@ function App() {
         <Route path="/forgot-password" element={<ResetPassword />} />
         <Route path="/reset-password" element={<NewPassword />} />
         <Route path="/confirmation" element={<Confirmation />} />
-        <Route path="/dashboard" element={<Dashboard 
+        <Route path="/dashboard" element={<Dashboard
+        mobileView={mobileView}
+        setMobileView={setMobileView} 
         filteredItems={filteredItems}
         searchKey={searchKey}
         setSearchKey={setSearchKey}
         activeFilterKey={activeFilterKey}
         setActiveFilterKey={setActiveFilterKey}
        />} />
-        <Route path="/binStatus" element={<BinStatus 
+        <Route path="/binStatus" element={<BinStatus
+        mobileView={mobileView}
+        setMobileView={setMobileView} 
         filteredItems={filteredItems} 
         searchKey={searchKey}
         setSearchKey={setSearchKey}
